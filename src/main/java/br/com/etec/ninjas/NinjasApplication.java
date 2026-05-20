@@ -9,5 +9,6 @@ public class NinjasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NinjasApplication.class, args);
 	}
-
+// para executar no terminal coloque: mvn spring-boot:run
 }
+
