@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.etec.ninjas.model.Ninja;
 import br.com.etec.ninjas.service.NinjaService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/ninjas")
@@ -17,7 +18,7 @@ public class NinjaController {
     private NinjaService ninjaService;
 
     @PostMapping
-    public Ninja cadastrarNinja(@RequestBody Ninja ninja){
+    public Ninja cadastrarNinja(@Valid @RequestBody Ninja ninja){
         return ninjaService.cadastrarNinja(ninja);
 
     }
